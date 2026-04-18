@@ -1,10 +1,45 @@
 <!DOCTYPE html>
-<html lang="en">
+<html
+        xmlns:th="http://www.thymeleaf.org"
+        xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+        xmlns:sec="http://www.thymeleaf/extras/spring-security"
+>
+
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <title>login</title>
+    <link rel="stylesheet"
+          href="/webjars/bootstrap/5.3.3/css/bootstrap.min.css">
+
 </head>
+
 <body>
-$END$
+
+<div class="p-3" >
+    <div class="row">
+        <div class="col col-md-6 offset-3">
+            <div class="card">
+                <div class="card-header">Authentication</div>
+                <div class="card-body">
+                    <form method="post" th:action="@{/login}">
+                        <div class="mb-3">
+                            <label class="form-label">username </label>
+                            <input type="text" name="username" class="form-control">
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">password </label>
+                            <input type="password" name="password" class="form-control">
+                        </div>
+                        <button class="btn btn-primary">Login</button>
+                    </form>
+
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+</div>
+
 </body>
 </html>
